@@ -1,0 +1,528 @@
+
+@font-face {
+    font-family: yourfont;
+    src: url(https://www.rejouice.com/static/fonts/SuisseIntl-Light.woff2);
+}
+@font-face {
+    font-family: yourfont2;
+    src: url(https://www.rejouice.com/static/fonts/SuisseIntl-Regular.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+title{
+    font-family: Suisse intl;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    position: relative;
+    z-index: 10;
+    overflow-x: hidden;
+    
+}
+
+.loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: black;
+    top: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    h3{
+        font-family: yourfont;
+        font-size: 2vw;
+    }
+}
+
+.page1{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: white;
+   
+
+    .cursor{
+        height:6vw;
+        width: 6vw;
+        background-color: #ff5f38;
+        border-radius: 50%;
+        position:absolute;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(-50%,-50%);
+        pointer-events: none;
+    }
+
+
+    video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    .page1-content{
+
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.161);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+     
+
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2vw 2vw;
+           
+
+            h4{
+                font-size: 1.2vw;
+                font-family:Suisse intl;
+                
+            }
+            h3{
+                 font-size: 1.2vw;
+                font-family:Suisse intl;
+            }
+        }
+
+        h1{
+            font-family: Granat Medium;
+            font-size: 27vw;
+            font-weight: 100;
+            line-height: 30vw;
+            letter-spacing: -23px;
+            pointer-events: none;
+
+            span{
+                display: inline-block;
+            }
+        }
+
+
+    }
+}
+
+
+.page2{
+    width: 100%;
+    height: 100%;
+    padding-left:50px;
+    padding-right: 50px;
+    background-color: white;
+   
+    
+
+    .elem1{
+          display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding-left:50px;
+    // padding-right: 50px;
+    padding-top: 80px;
+
+    h3,h4{
+        font-weight: 550;
+        font-size: 20px;
+        font-family:Suisse intl;
+        
+    }
+    }
+  
+    hr{
+    //    margin-left:50px ;
+    //    margin-right:50px ;
+       margin: 20px 0;
+    }
+
+
+    .elem2{
+        width: 100vw;
+        height: 100vh;
+        .first{
+            padding-left: 90px;
+        }
+
+        h1{
+            font-size: 4.2vw;
+            font-weight: 100;
+            font-family: Suisse intl ;
+             display: flex;
+             flex-direction: column;
+             gap: 1.5vw;
+            overflow:hidden;
+           
+        }
+
+       
+    }
+
+}
+
+.page3{
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom:50px;
+    padding-left:50px;
+    padding-right: 50px;
+    background-color: white;
+
+
+
+    .top{
+        text-align: center;
+
+        h4{
+            margin-bottom: 1vw;
+            font-size: 1vw;
+            font-weight: 100;
+
+
+            span{
+                background-color: black;
+                color: white;
+                padding: 3px 10px;
+                border-radius: 10px;
+            }
+        }
+
+        h2{
+            font-size: 4vw;
+            font-weight: 200;
+        }
+    }
+
+    .bottom{
+        height: 75vh;
+        width: 100%;
+        margin-top: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .box{
+            height: 100%;
+            width: 32%;
+            position: relative;
+
+            video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                position: absolute;
+                transition: all linear 0.8s;
+            }
+        }
+
+        .box:hover img{
+            opacity: 0;
+        }
+    }
+}
+
+
+.page4{
+    height: 100vh;
+    width: 100%;
+    padding: 7vw 0;
+    background-color: white;
+
+    .top{
+        h1{
+            font-family:Suisse intl;
+            font-size: 7vw;
+            border-bottom: 2px solid black;
+            width: 96%;
+            margin: 0 4%;
+          
+        }
+    }
+
+.slider {
+    width: 100%;
+    height: 70vh;
+    margin-top: 3vw;
+    display: flex;
+    --gap: 40px;
+    overflow: hidden;
+    gap: var(--gap);
+    justify-content: flex-start; // change to flex-start
+    align-items: center;
+    position: relative;
+
+    .slider-track {
+        display: flex;
+        gap: var(--gap);
+        animation: scroll 15s linear infinite; // slow and smooth
+    }
+
+    @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+   
+
+    .slider-track:hover {
+        animation-play-state: paused; // pause on hover
+       cursor: pointer;
+    }
+
+    
+   
+   
+
+    .box {
+        width: 30vw;
+        height: 100%;
+        flex-shrink: 0;
+        background-color: #452929;
+
+
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+           object-position: center;
+        }
+    }
+
+    .box.first {
+        height: 50vh;
+      display: flex;
+      
+      background: black;
+      color: white;
+
+       .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+      padding: 3vw 2vw;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 100;
+        gap: 0.3vw;
+
+        h5{
+            font-family: yourfont;
+            font-weight: 100;
+
+            span{
+                opacity: 0.8;
+            }
+        }
+      }
+    }
+
+
+    .box.second {
+        height: 50vh;
+      display: flex;
+      flex-direction: column;
+      
+      background: #f7f7f7;
+      color: white;
+
+       .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+      padding: 3vw 2vw;
+        width: 100%;
+        height: 100%;
+        color: rgb(0, 0, 0);
+        font-size: 1.8rem;
+        font-weight: 100;
+        gap: 0.3vw;
+
+        h5{
+            font-family: yourfont;
+            font-weight: 500;
+
+            span{
+                opacity: 0.8;
+            }
+        }
+      }
+
+      .loader {
+  font-size: 60px;
+ display: flex;
+  padding: 0 2vw;
+  color: #bbb;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+    }
+}
+
+
+    
+
+
+}
+
+
+
+.page5{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    padding: 18vw 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+
+
+    h2{
+        font-family: Suisse intl;
+        font-size: 4vw;
+        font-weight: 100;
+        font-style: normal;
+        padding-bottom: 6vw;
+    }
+
+    hr{
+        margin: 2vw 0;
+    }
+
+    .text{
+        width: 65%;
+        height: 100%;
+
+        display: flex;
+        gap: 25vw;
+        // align-items: center;
+        p{
+
+            font-size: 20px;
+            font-family:yourfont;
+            font-weight: 100;
+           
+        }
+
+        .txt1{
+            width: 99%;
+        }
+        .text2{
+            width: 1%;
+        }
+    }
+
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 70vh;
+        background-color: #452929;
+        video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform-origin: center;
+        }
+        
+    }
+
+    // .box:hover{
+    //     transform: scale(2);
+    //     transition: all linear 2s;
+    // }
+
+    
+}
+
+.page6{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2{
+        font-family: yourfont;
+        font-size: 4vw;
+        font-weight: 100;
+    }
+   
+    .line{
+        width: 30%;
+        height: 2px;
+        background-color: black;
+      
+    }
+
+    
+}
+
+.page7{
+    width: 100%;
+    height: 100vh;
+  
+}
+
+.footer{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+
+    h1{
+            font-family: Granat Medium;
+            font-size: 27vw;
+            font-weight: 100;
+            line-height: 30vw;
+            letter-spacing: -23px;
+            color: white;
+          
+            span{
+                  display: inline-block;
+            }
+        }
+
+}
